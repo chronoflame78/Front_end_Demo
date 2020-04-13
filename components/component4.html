@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AboutMeWebsite</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon"  type="image/png" href="favicon.ico"/>
+</head>
+<body>
+<div class="container">
+    <div class="album-square">
+        <div class="overlay">
+            <i class="fa fa-play-circle"></i>
+        </div>
+    </div>
+    
+
+</div>
+</body>
+<style>
+.album-square{
+    width: 128px;
+    height: 128px;
+    background-color: #DDD;
+    background-image: url('https://via.placeholder.com/128x128');
+    background-size: cover;
+    background-position: center;
+    color:#fff;
+    font-size: 40px;
+}
+
+.album-square .overlay{
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /*display:none; visibility:hidden*/
+    transition: all 0.5s;
+}
+
+.album-square:hover .overlay{
+    opacity: 1;
+}
+
+.album-square .overlay i{
+    transform: scale(0.5);
+    transition: all 0.5s;
+}
+
+.album-square:hover .overlay i{
+    transform: scale(1);
+}
+
+</style>
+</html>

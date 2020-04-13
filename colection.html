@@ -1,0 +1,476 @@
+<!-- Carousel slide -->
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="img-fluid" src="images/pic1.jpg" alt="Los Angeles">
+      </div>
+      <div class="carousel-item">
+        <img class="img-fluid" src="images/pic2.jpg" alt="Chicago">
+      </div>
+      <div class="carousel-item">
+        <img class="img-fluid" src="images/pic3.jpg" alt="New York">
+      </div>
+    </div>
+    
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+<!--START rainbow card -->
+  <div class="custom-card rainbow">
+            
+</div>
+<!--END rainbow card -->
+<!--START cool border animation -->
+<section>
+  <div class="container">
+    <div class="background-img">
+      <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="content">
+          <h2>My animated Border </h2>
+          <p><a href="http://www.cakecounter.com/" style="color:#00ffe9;" target="_blank">All our modules are designed to play nicely with responsive of course. At the end of the day it comes down to the theme you use - our code doesn't get in your way.</a></p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!--END cool border animation -->
+
+<!--START topnnav -->
+<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+<!--END topnnav -->
+<div class="jumbotron text-center" style="margin-bottom:0px">
+    <h1>My First Bootstrap Page</h1>
+    <p>Resize this responsive page to see the effect!</p> 
+</div>
+<!--START footer -->
+<footer class="footer">
+
+  <!-- Copyright -->
+  <div class="text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!--END footer -->
+<!--START nav -->
+<nav class="navbar navbar-expand-sm fixed-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <ul class="navbar-nav">  
+        <li class="nav-item">
+            <span style="font-size: 30px; font-weight: 500;">Nhat Nguyen</span>
+            <br/>
+            <span>Javascript Full-stack Developer</span>
+          </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">            
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+  <!--END nav -->
+
+<!-- Topnav version1-->
+<div class="topnav" id="myTopnav">
+  <div class="icon-div">
+    
+  </div>
+  <div class="name-div">    
+  <span style="font-size: 22px; font-weight: 500;">Nhat Nguyen</span>
+          <br/>
+   <span style="font-size: 13px;">Javascript Full-stack Developer</span>
+  </div>
+  <div class="menu-nav">
+  <a href="#news">Home</a>
+  <a href="#contact">About</a>
+  <a href="#about">Contact</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+  </div>
+</div>
+<!-- Topnav version1-->
+
+<style>
+      /*topnav*/
+ .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Make the image fully responsive */
+.carousel-inner img {
+      width: 100%;
+      height: auto;
+  }
+
+/*Custom card*/
+.custom-card{
+  height: 700px;
+  width:500px;
+  margin:100px auto;
+  border-radius: 30px;
+}
+
+/*Footer*/
+
+
+/*Border-animation*/
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.rainbow {
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+	padding: 2rem;}
+	
+	.rainbow::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #23E0E0;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#23E0E0, #23E0E0), linear-gradient(#A970CB, #A970CB);
+		animation: rotate 4s linear infinite;
+	}
+	
+	.rainbow::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: white;
+		border-radius: 5px;
+	}
+
+
+  *{
+  margin:0;
+  padding:0;
+}
+
+/*Animation*/
+ .container{  padding-top: 20px;
+  padding-bottom: 20px;} 
+/* body{
+  background-color: #111845;
+} */
+
+.background-img{
+  background-image: url("https://3.bp.blogspot.com/-piZWCW2uUbg/W2fPXxkWZgI/AAAAAAAAOu0/eydmMjTIqcwLMHEEr2H7imqoRTxMw4o9QCLcBGAs/s1600/among_trees_night_dribbble.png");
+height: 400px;
+  width: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5% auto;
+  padding:20px;
+  border: 1px solid #2a3cad;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px #2a3cad;
+  position: relative;
+}
+
+.content h2{ font-size:19px;}
+
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: #111845a6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #2a3cad;
+  color: white;
+  padding: 20px;
+}
+
+.box:before{
+  content: '';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background: rgba(255,255,255,0.1);
+  transition:0.5s;
+  pointer-events: none;
+}
+
+.box:hover:before{
+  left:-50%;
+  transform: skewX(-5deg);
+}
+
+
+.box .content{
+  position:absolute;
+  top:15px;
+  left:15px;
+  right:15px;
+  bottom:15px;
+  border:1px solid #f0a591;
+  padding:20px;
+  text-align:center;
+  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
+  
+}
+
+.box span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  
+}
+
+.box span:nth-child(1)
+{
+  transform:rotate(0deg);
+}
+
+.box span:nth-child(2)
+{
+  transform:rotate(90deg);
+}
+
+.box span:nth-child(3)
+{
+  transform:rotate(180deg);
+}
+
+.box span:nth-child(4)
+{
+  transform:rotate(270deg);
+}
+
+.box span:before
+{
+  content: '';
+  position: absolute;
+  width:100%;
+  height: 2px;
+  background: #50dfdb;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+  transform:scaleX(0);
+  transform-origin: left;
+  }
+  50%
+  {
+    transform:scaleX(1);
+  transform-origin: left;
+  }
+  50.1%
+  {
+    transform:scaleX(1);
+  transform-origin: right;
+    
+  }
+  
+  100%
+  {
+    transform:scaleX(0);
+  transform-origin: right;
+    
+  }
+  
+  
+  
+} 
+.nav-link{
+    font-size: 20px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#23E0E0, #A970CB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 30px;
+  }
+  .navbar{
+    border-bottom: 1px solid #E5E9EF;
+  }
+
+  /*Topnav version 1*/
+  .topnav {
+  overflow: hidden;
+  border-bottom: 1px solid #E5E9EF;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 24px 24px;
+  text-decoration: none;
+  font-size: 17px;
+  height: 74px;
+  font-weight: 500;
+}
+
+.topnav a:hover:not(:last-child) {
+  background: -webkit-linear-gradient(#23E0E0, #A970CB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav a.icon:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  /* .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  } */
+}
+@media screen and (min-width: 600px) {
+  .mobile-link{
+    display: none!important;
+  }
+}
+.name-div{
+  display: block;
+  float: left;
+  padding: 8px 0px;
+  height: 74px;
+}
+
+.icon-div{
+  display: block;
+  float: left;
+  margin-top: 7px;
+  background-image: url(./images/leo.jpg);
+  height: 64px;
+  width: 64px;
+  background-size: contain;
+}
+
+.menu-nav{
+  float:right;
+  height: 74px;
+}
+
+.mobile-link{
+  display: none;
+  color: black;
+  padding: 10px 74px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  border-bottom: 1px solid #E5E9EF;
+}
+.mobile-link:hover{
+  display: block;
+  color: black;
+  background-color: #838E95;
+  padding: 10px 60px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+.mobile-link:active{
+  display: block;
+  color: black;
+  background-color: #838E95;
+  padding: 10px 60px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+/*Topnav version 1*/
+</style>

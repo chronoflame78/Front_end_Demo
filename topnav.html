@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AboutMeWebsite</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon"  type="image/png" href="favicon.ico"/>
+
+
+</head>
+<body>
+    <div class="topnav fixed-top" id="myTopnav">
+        <div class="icon-image">
+        
+        </div>
+        <div class = "text-div">
+          <div class="name-div">Nhat Nguyen</div>
+          <div class="job-title">Javascript Fullstack Developer</div>
+        </div>
+        <div class="link"><a href="#news">Home</a></div>
+        <div class="link"><a href="#news">About</a></div>
+        <div class="link"><a href="#news">Contact</a></div>
+        <div class="icon">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a></div>
+      </div>
+      <div class="group-mobile-link">
+      <div><a class="mobile-link" href="#news">Home</a></div>
+      <div><a class="mobile-link" href="#contact">About</a></div>
+      <div><a class="mobile-link" href="#about">Contact</a></div>
+    </div>
+</body>
+<style>
+.topnav{
+  display:flex;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #E5E9EF;
+}
+
+.topnav .icon-image{
+  padding: 0 8px;
+  background-image: url(./images/leo.jpg);
+  height: 62px;
+  width: 62px;
+  background-size: contain;
+}
+
+.topnav .text-div{
+  flex-grow:1;
+ 
+}
+
+.name-div{
+  font-size: 22px; 
+  font-weight: 500;
+  position: relative;
+  top:-2px;
+}
+
+
+.job-title{
+  font-size:13px;
+  position: relative;
+  top:-2px;
+}
+
+.link a{
+  padding:0 24px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  color:black;
+}
+.topnav .icon {
+  display: none;
+  color:black;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .link a {display: none;}
+  .topnav .icon {
+    display: block;
+    padding: 10px 24px;
+  }
+  .topnav .icon a{
+    border: 1px solid #f2f2f2;
+  }
+  .topnav .icon a:hover {
+    background-color: #f2f2f2;
+  }
+}
+@media screen and (min-width: 600px) {
+  .mobile-link{
+    display: none!important;
+  }
+}
+.mobile-link{
+  display: none;
+  color: black;
+  padding: 10px 74px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  border-bottom: 1px solid #E5E9EF;
+}
+.mobile-link:hover{
+  display: block;
+  color: black;
+  background-color: #838E95;
+  padding: 10px 60px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+.mobile-link:active{
+  display: block;
+  color: black;
+  background-color: #838E95;
+  padding: 10px 60px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+.group-mobile-link{
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+</style>
+<script>
+    function myFunction() {  
+    if ($(".mobile-link").css("display")==="none") {
+      $(".mobile-link").css("display", "block");
+    } else {
+      $(".mobile-link").css("display", "none");
+    }
+  }
+</script>
+</html>
