@@ -232,4 +232,27 @@ function maxFraction(numerators, denominators){
         return max;
     }
     
+    //DAN có một người bạn rất thích chơi lego nên muốn ra một câu đố. DAN đang có vô số mảnh lego với chiều rộng là 1
+    // và chiều dài là a và b. Hãy giúp người bạn của DAN tìm số mảnh lego ít nhất  mà có thể lắp được một hàng lego với 
+    //chiều dài là n và chiều rộng là 1, nếu không có cách nào hãy trả về -1.
+    //giai pt ax+by = n
+    function lego(a,b,n){
+        let arr = [];
+        for (let i = 0; i * a <= n; i++) 
+            { 
+                // check if it is satisfying the equation 
+                if ((n - (i * a)) % b === 0) 
+                { 
+                    arr.push(i +  (n - (i * a)) / b); 
+                } 
+            } 
+        if(arr.length === 0)
+        return -1;
+    
+        arr.sort((a,b) => {
+            return a-b;
+        });
+        return arr[0];
+    
+    }
 }
