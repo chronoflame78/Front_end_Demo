@@ -388,35 +388,28 @@ var reverse = function(x) {
     }
 };
 
-//605. Can Place Flowers
-
-var canPlaceFlowers = function(flowerbed, n) {
-    let count = 0;
-    for (let i = 0; i < flowerbed.length; i++) {
-        if (flowerbed[i] === 0) {
-            // Check if the current plot and its adjacent plots are empty.
-            const prevEmpty = i === 0 || flowerbed[i - 1] === 0;
-            const nextEmpty = i === flowerbed.length - 1 || flowerbed[i + 1] === 0;
-
-            if (prevEmpty && nextEmpty) {
-                // Plant a flower at the current plot.
-                flowerbed[i] = 1;
-                count++;
-
-                if (count >= n) {
-                    return true; // We've planted enough flowers.
-                }
-            }
+//55. Jump Game  - greedy algorithm
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var canJump = function(nums) {
+    let maxReachable = 0; // Initialize the maximum reachable index
+  
+    for (let i = 0; i < nums.length; i++) {
+        if (i > maxReachable) {
+            return false; // If you can't reach the current index, return false
         }
+        
+        maxReachable = Math.max(maxReachable, i + nums[i]); // Update maxReachable
     }
-
-    return count >= n; // Check if we've planted enough flowers.
-
     
-// The time complexity of the canPlaceFlowers function is O(N), where N is the length of the flowerbed array. This is because the function iterates through the flowerbed array once, performing constant-time operations at each step.
+    return true; // If you can reach the last index, return true
 
-// The space complexity of the function is O(1), which means it uses a constant amount of extra space regardless of the size of the input flowerbed array. The additional space used by the function is for variables like count, prevEmpty, nextEmpty, and the loop counter i, all of which occupy a constant amount of memory. The function does not create any data structures or allocate memory that scales with the size of the input array, making its space complexity constant.
+    //This algorithm has a time complexity of O(n), where n is the length of the nums array, as it iterates through the array once. The space complexity is O(1) because it uses only a constant amount of extra space for variables.
 };
+
+
 
 //345. Reverse Vowels of a String
 var reverseVowels = function(s) {
@@ -489,6 +482,64 @@ var decodeString = function(s) {
 
 
 
+//605. Can Place Flowers
+
+var canPlaceFlowers = function(flowerbed, n) {
+    let count = 0;
+    for (let i = 0; i < flowerbed.length; i++) {
+        if (flowerbed[i] === 0) {
+            // Check if the current plot and its adjacent plots are empty.
+            const prevEmpty = i === 0 || flowerbed[i - 1] === 0;
+            const nextEmpty = i === flowerbed.length - 1 || flowerbed[i + 1] === 0;
+
+            if (prevEmpty && nextEmpty) {
+                // Plant a flower at the current plot.
+                flowerbed[i] = 1;
+                count++;
+
+                if (count >= n) {
+                    return true; // We've planted enough flowers.
+                }
+            }
+        }
+    }
+
+    return count >= n; // Check if we've planted enough flowers.
+
+    
+// The time complexity of the canPlaceFlowers function is O(N), where N is the length of the flowerbed array. This is because the function iterates through the flowerbed array once, performing constant-time operations at each step.
+
+// The space complexity of the function is O(1), which means it uses a constant amount of extra space regardless of the size of the input flowerbed array. The additional space used by the function is for variables like count, prevEmpty, nextEmpty, and the loop counter i, all of which occupy a constant amount of memory. The function does not create any data structures or allocate memory that scales with the size of the input array, making its space complexity constant.
+};
+
+
+//746. Min Cost Climbing Stairs - dynamic programming
+
+/**
+ * @param {number[]} cost
+ * @return {number}
+ */
+var minCostClimbingStairs = function(cost) {
+    const n = cost.length;
+    const dp = new Array(n);
+  
+    // Initialize the first two steps in dp
+    dp[0] = cost[0];
+    dp[1] = cost[1];
+  
+    // Iterate through the rest of the steps
+    for (let i = 2; i < n; i++) {
+      dp[i] = cost[i] + Math.min(dp[i - 1], dp[i - 2]);
+    }
+  
+    // Return the minimum cost to reach the last step
+    return Math.min(dp[n - 1], dp[n - 2]);
+  
+  //   This algorithm has a time complexity of O(n), where n is the number of steps, as it iterates through the cost array once. The space complexity is O(n) as well because of the dp array.
+  };
+
+
+
 //Graphs - DFS  (Depth First Search)
 
 //841. Keys and Rooms
@@ -520,3 +571,5 @@ var canVisitAllRooms = function(rooms) {
 // Time Complexity: The time complexity of the DFS algorithm is O(V + E), where V is the number of vertices (rooms) and E is the number of edges (keys that unlock rooms). In this context, V represents the number of rooms, and E represents the total number of keys in all rooms.
 
 // Space Complexity: The space complexity is O(V), where V is the number of rooms. This space is used to store the visited set, which keeps track of the visited rooms.
+
+
